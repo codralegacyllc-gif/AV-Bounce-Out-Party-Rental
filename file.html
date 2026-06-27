@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bounce Out Party Rentals | Antelope Valley Party Rentals</title>
+  <meta
+    name="description"
+    content="Bounce Out Party Rentals offers water slides, jumpers, bounce houses, chairs, tables, and photo booths in Antelope Valley."
+  />
+  <style>
+    :root {
+      --primary: #1e90ff;
+      --secondary: #ff4fa3;
+      --accent: #ffd93d;
+      --highlight: #ff7a00;
+      --dark: #1f2a44;
+      --light: #f4faff;
+      --white: #ffffff;
+      --gray: #5b6475;
+      --success: #19a974;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--dark);
+      background: var(--light);
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--white);
+      padding: 18px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1150px;
+      margin: 0 auto;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.7rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .hero {
+      background:
+        linear-gradient(rgba(30, 144, 255, 0.82), rgba(255, 79, 163, 0.75)),
+        url('[images.unsplash.com](https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=1400&q=80)')
+        center/cover no-repeat;
+      color: var(--white);
+      text-align: center;
+      padding: 120px 20px 100px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 14px;
+      line-height: 1.15;
+    }
+
+    .hero .tagline {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--accent);
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto 28px;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 800;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px) scale(1.02);
+      opacity: 0.96;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--dark);
+    }
+
+    .btn-secondary {
+      background: var(--highlight);
+      color: var(--white);
+    }
+
+    section {
+      padding: 72px 0;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 16px;
+      color: var(--primary);
+    }
+
+    .section-intro {
+      max-width: 780px;
+      margin: 0 auto 36px;
+      text-align: center;
+      color: var(--gray);
+      font-size: 1.05rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 10px 26px rgba(31, 42, 68, 0.08);
+      border-top: 6px solid var(--secondary);
+    }
+
+    .card h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      color: var(--dark);
+    }
+
+    .price {
+      display: inline-block;
+      margin-top: 12px;
+      font-weight: 800;
+      color: var(--success);
+    }
+
+    .about-box,
+    .contact-box,
+    .policy-box {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 34px;
+      box-shadow: 0 10px 26px rgba(31, 42, 68, 0.08);
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    .about-box p,
+    .contact-box p,
+    .policy-box p {
+      margin-bottom: 15px;
+    }
+
+    .why-choose {
+      background: #fff8ef;
+    }
+
+    .pricing {
+      background: #fef6ff;
+    }
+
+    .service-area {
+      background: #eef7ff;
+    }
+
+    .policies {
+      background: #fff4fb;
+    }
+
+    .contact-info {
+      text-align: center;
+      margin-top: 18px;
+    }
+
+    .contact-info p {
+      margin-bottom: 10px;
+      font-size: 1.05rem;
+    }
+
+    .contact-info a {
+      color: var(--secondary);
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    footer {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--white);
+      text-align: center;
+      padding: 28px 20px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero .tagline {
+        font-size: 1.15rem;
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        padding-top: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">Bounce Out Party Rentals</div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#rentals">Rentals</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#why-us">Why Choose Us</a></li>
+          <li><a href="#policies">Policies</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="container">
+      <h1>Bounce Out Party Rentals</h1>
+      <div class="tagline">Where the party bounces to life</div>
+      <p>
+        Colorful party rentals in Antelope Valley for birthdays, school events,
+        church gatherings, family celebrations, and more. We provide water slides,
+        jumpers, bounce houses, chairs, tables, and photo booths with friendly local service.
+      </p>
+      <div class="btn-group">
+        <a class="btn btn-primary" href="tel:6614837101">Call 661-483-7101</a>
+        <a class="btn btn-secondary" href="#contact">Book Your Party</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="rentals">
+    <div class="container">
+      <h2>Our Rentals</h2>
+      <p class="section-intro">
+        Fun party rentals for all kinds of events across Antelope Valley.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <h3>Water Slides</h3>
+          <p>Exciting water slide rentals that bring big fun to warm-weather parties and celebrations.</p>
+        </div>
+        <div class="card">
+          <h3>Jumpers</h3>
+          <p>Classic jumper rentals that keep kids active, entertained, and smiling all day.</p>
+        </div>
+        <div class="card">
+          <h3>Bounce Houses</h3>
+          <p>Bright and colorful bounce houses that are perfect for birthdays and backyard events.</p>
+        </div>
+        <div class="card">
+          <h3>Chairs</h3>
+          <p>Convenient chair rentals to make your event more comfortable and organized.</p>
+        </div>
+        <div class="card">
+          <h3>Tables</h3>
+          <p>Table rentals for food, gifts, cake displays, seating, and party essentials.</p>
+        </div>
+        <div class="card">
+          <h3>Photo Booths</h3>
+          <p>Add a fun photo booth to capture memories and keep guests entertained.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <h2>Pricing</h2>
+      <p class="section-intro">
+        Simple pricing for popular rentals.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <h3>Jumpers / Bounce Houses</h3>
+          <p>Perfect for birthdays, family parties, and neighborhood celebrations.</p>
+          <span class="price">$175 for 24 hours</span>
+        </div>
+        <div class="card">
+          <h3>Water Slides</h3>
+          <p>A fun way to cool off and keep the party going.</p>
+          <span class="price">$300 for 24 hours</span>
+        </div>
+        <div class="card">
+          <h3>Chairs</h3>
+          <p>Comfortable seating for guests at events of every size.</p>
+          <span class="price">$3 each</span>
+        </div>
+        <div class="card">
+          <h3>Tables</h3>
+          <p>Great for food, gifts, desserts, and seating arrangements.</p>
+          <span class="price">$13 each</span>
+        </div>
+        <div class="card">
+          <h3>Photo Booths</h3>
+          <p>A great add-on for memorable moments and extra fun.</p>
+          <span class="price">$400 for 24 hours</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <div class="about-box">
+        <p>
+          <strong>Bounce Out Party Rentals</strong> is a local party rental company proudly serving
+          <strong>Antelope Valley</strong>.
+        </p>
+        <p>
+          We help bring fun, energy, and convenience to birthdays, family parties, school events,
+          church gatherings, and other celebrations with colorful rentals and dependable local service.
+        </p>
+        <p>
+          Our goal is simple: make party planning easier with clean equipment, reliable setup,
+          on-time delivery, and friendly customer service.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="why-choose" id="why-us">
+    <div class="container">
+      <h2>Why Choose Us</h2>
+      <p class="section-intro">
+        We focus on safe, simple, and fun party rentals for every event.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <h3>Clean Equipment Every Time</h3>
+          <p>We take pride in providing rentals that are clean and ready for your event.</p>
+        </div>
+        <div class="card">
+          <h3>Safe and Reliable Setup</h3>
+          <p>We handle setup with care so your event can run smoothly from the start.</p>
+        </div>
+        <div class="card">
+          <h3>On-Time Delivery</h3>
+          <p>We work hard to deliver on schedule so you can stay focused on your guests.</p>
+        </div>
+        <div class="card">
+          <h3>Friendly Customer Service</h3>
+          <p>We make the booking process easy and provide helpful service every step of the way.</p>
+        </div>
+        <div class="card">
+          <h3>Fun Options for Every Party</h3>
+          <p>From water slides to photo booths, we offer rentals for all kinds of celebrations.</p>
+        </div>
+        <div class="card">
+          <h3>Serving Antelope Valley With Care</h3>
+          <p>As a local business, we are proud to serve our community with dependable service.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="service-area" id="service-area">
+    <div class="container">
+      <h2>Service Area</h2>
+      <p class="section-intro">
+        Proudly serving Antelope Valley and surrounding communities.
+      </p>
+      <div class="grid">
+        <div class="card"><h3>Antelope Valley</h3><p>Local service you can count on for your next event.</p></div>
+        <div class="card"><h3>Palmdale</h3><p>Party rentals for birthdays, family gatherings, and special events.</p></div>
+        <div class="card"><h3>Lancaster</h3><p>Reliable rentals delivered for all kinds of celebrations.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="policies" id="policies">
+    <div class="container">
+      <h2>Special Policies</h2>
+      <div class="policy-box">
+        <p>
+          A <strong>deposit is required</strong> to reserve your rental and secure your event date.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <div class="contact-box">
+        <p>
+          Ready to book your party rental? Contact Bounce Out Party Rentals for pricing,
+          availability, and reservations.
+        </p>
+        <div class="contact-info">
+          <p><strong>Phone:</strong> <a href="tel:6614837101">661-483-7101</a></p>
+          <p><strong>Email:</strong> <a href="mailto:codralegacyllc@gmail.com">codralegacyllc@gmail.com</a></p>
+          <p><strong>Service Area:</strong> Antelope Valley</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>Bounce Out Party Rentals</strong> | Where the party bounces to life</p>
+    <p>
+      Phone: <a href="tel:6614837101">661-483-7101</a> |
+      Email: <a href="mailto:codralegacyllc@gmail.com">codralegacyllc@gmail.com</a>
+    </p>
+  </footer>
+</body>
+</html>
